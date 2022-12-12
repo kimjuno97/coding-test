@@ -1,5 +1,5 @@
 function solution(progresses, speeds) {
-  var answer = [];
+  const answer = [];
   const workday = progresses.map((v, i) => Math.ceil((100 - v) / speeds[i]));
   
   let deploy = 1;
@@ -16,6 +16,7 @@ function solution(progresses, speeds) {
         workday.splice(0, workday.length);
       }
     }
+      console.log(workday)
   }
 
   return answer;

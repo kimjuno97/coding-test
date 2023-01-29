@@ -11,3 +11,14 @@ function solution(id_pw, db) {
     })
     return answer;
 }
+
+// 다른 사람 풀이
+function solution(id_pw, db) {
+    let answer = 'fail';
+    for(let i of db){
+        if(i[0] === id_pw[0] && i[1] === id_pw[1]) answer = 'login';
+        else if(i[0] === id_pw[0] && i[1] !== id_pw[1]) answer= 'wrong pw';
+    }
+
+    return answer;
+}

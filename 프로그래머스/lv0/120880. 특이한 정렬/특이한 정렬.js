@@ -13,7 +13,10 @@ function solution(numlist, n) {
   });
 
   // 정렬된 값으로만 새 배열 만들기
-  let answer = distances.map(obj => obj.value);
+  return distances.map(obj => obj.value);  
+}
 
-  return answer;
+// 다른 사람 풀이
+function solution(numlist, n) {
+  return numlist.sort((a, b) => Math.abs(a - n) - Math.abs(b - n) || b - a);
 }

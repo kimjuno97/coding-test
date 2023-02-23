@@ -1,4 +1,4 @@
 function solution(a, b) {
-    return ((a/b + "").length >= 16 ? 2 : 1)
+    return (a/b).toString().length > 14 ? 2 : 1
 }
 

@@ -1,5 +1,11 @@
 function solution(n) {
-  return [...Array(n * 3)]
-    .map((_, i) => i + 1)
-    .filter((num) => num % 3 !== 0 && !num.toString().includes("3"))[n - 1];
+  const filteredArr = [];
+
+  for (let i = 1; filteredArr.length < n; i++) {
+    if (i % 3 !== 0 && !i.toString().includes("3")) {
+      filteredArr.push(i);
+    }
+  }
+
+  return filteredArr[n - 1];
 }
